@@ -1,0 +1,143 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #f4f4f4af;
+}
+   /* HEADER */
+header{
+    background: linear-gradient(135deg,#1e90ff, #00bcd4);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    
+}
+
+   /* SEÇÕES */
+
+section{
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+ /* PROJETOS*/
+.projetos{
+   display: flex; 
+   gap: 15px;
+   flex-wrap: wrap;
+  
+}
+/* CARDS */
+.card{
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1  100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0,1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    border:   solid rgba(0, 0, 0, 0.137);
+
+
+}
+
+.card{
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 0.8s ease forwards;
+}
+.card a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* EFEITO HOVER*/
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0,2);
+}
+
+.card:nth-child(1) { animation-delay:  0.2s;}
+.card:nth-child(2) { animation-delay:  0.4s;}
+.card:nth-child(3) { animation-delay:  0.6s;}
+.card:nth-child(4) { animation-delay:  0.8s;}
+
+h2{
+    border-left: 5px solid #1e90ff;
+    padding-left: 10px;
+
+}
+
+/* MENU*/
+.menu{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: #222;
+    padding: 10px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+
+}
+
+.menu a:hover{
+    color: #00bcd4;
+
+}
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* BOTÃO*/
+.btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background: #00bcd4;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #0097a7;
+}
+
+
+@media ( max-width: 600px) {
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .projetos {
+        flex-direction: column;
+    }
+
+    header {
+        padding: 30px 10px;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@keyframes aparecer {
+    to  {
+
+    opacity: 1;
+    transform: translateY(0);
+
+    }
+    
+}
