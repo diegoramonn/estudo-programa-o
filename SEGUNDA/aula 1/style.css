@@ -1,7 +1,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    background: #f4f4f4af;
+    background: #0f172a;
+    color: white;
 }
    /* HEADER */
 header{
@@ -9,6 +10,9 @@ header{
     color: white;
     text-align: center;
     padding: 40px 20px;
+
+    justify-content: space-between;
+
     
 }
 
@@ -17,17 +21,35 @@ header{
 section{
     max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 60px 20px;
     
 }
 
+ /* TITULOS */
+ h1, h2{
+    margin-bottom: 20px;
+ }
+
  /* PROJETOS*/
 .projetos{
-   display: flex; 
+   display: grid; 
+   grid-template-columns: 3,1fr;
    gap: 15px;
    flex-wrap: wrap;
+
+   background: #1e293b;
+   padding: 20px;
+   border-radius: 10px;
+   transition: 0.3s;
+  
   
 }
+
+.projetos:hover {
+    transform: scale(1.05);
+}
+
+
 /* CARDS */
 .card{
     background: white;
@@ -140,4 +162,32 @@ html {
 
     }
     
+}
+
+
+/* ESTILO PADRÃO PC*/
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* PARA TELAS MENORES (CELULAR) */
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .projetos {
+        grid-template-columns: 1fr;
+    }
 }
